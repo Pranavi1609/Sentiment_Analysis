@@ -73,8 +73,3 @@ if st.button("Predict"):
             st.subheader("The sentiment of the given text is: Positive")
     else:
         st.subheader("Please enter a text for prediction.")
-
-
-
-from google.colab import drive
-drive.mount('/content/drive')
