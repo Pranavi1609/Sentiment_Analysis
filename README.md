@@ -79,34 +79,6 @@ python deployment.py
 
 # Follow the prompts to input text for sentiment analysis
 # Output: Sentiment classification (Positive/Negative/Neutral)
-```
-
-### Code Example
-```python
-import pickle
-
-# Load the trained model and vectorizer
-with open('svm_model.pkl', 'rb') as f:
-    model = pickle.load(f)
-
-with open('tfidf_vectorizer.pkl', 'rb') as f:
-    vectorizer = pickle.load(f)
-
-# Analyze sentiment
-def predict_sentiment(text):
-    # Transform text using the loaded vectorizer
-    text_tfidf = vectorizer.transform([text])
-    
-    # Predict sentiment
-    prediction = model.predict(text_tfidf)
-    return prediction[0]
-
-# Example usage
-sample_text = "This product is amazing! I love it!"
-sentiment = predict_sentiment(sample_text)
-print(f"Sentiment: {sentiment}")
-```
-
 ---
 
 ## 📊 Model Details
